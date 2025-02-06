@@ -398,247 +398,265 @@ const FooterLink = styled(Link)(() => ({
 const AppHero = () => {
   return (
     <section id="waitlist">
-    <Box
-      sx={{
-        bgcolor: "#f3f3f3",
-        position: "relative",
-        minHeight: { xs: "100vh", sm: "50vh", md: "80vh", lg: "70vh" },
-        overflow: "hidden",
-        display: "flex",
-        flexDirection: "column",
-        padding: { xs: 2, md: 4, lg: 1 },
-      }}
-    >
-      {/* Animated background gradients */}
-      <GradientBackground
-        sx={{ background: "#aaeaf8", bottom: "-9%", left: "20%" }}
-        animation={moveAndResize1}
-      />
-      <GradientBackground
-        sx={{ background: "#f1904f", bottom: "0%", left: "34%" }}
-        animation={moveAndResize2}
-      />
-      <GradientBackground
-        sx={{ background: "#85aee9", bottom: "1%", left: "50%" }}
-        animation={moveAndResize3}
-      />
-      <GradientBackground
-        sx={{ background: "#f179a9", bottom: "1%", left: "65%" }}
-        animation={moveAndResize4}
-      />
-      <GradientBackground
-        sx={{ background: "#f7cb6d", bottom: "-9%", left: "81%" }}
-        animation={moveAndResize5}
-      />
-
-      <Container
-        maxWidth="lg"
+      <Box
         sx={{
-          flex: 1,
+          bgcolor: "#f3f3f3",
+          position: "relative",
+          minHeight: { xs: "100vh", sm: "50vh", md: "80vh", lg: "70vh" },
+          overflow: "hidden",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          textAlign: "center",
-          py: 1,
-          position: "relative",
-          zIndex: 1,
+          padding: { xs: 2, md: 4, lg: 1 },
         }}
       >
-        <Box
-          component="img"
-          src="https://images.unsplash.com/photo-1504326787394-e6d75cae8027?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Welike Logo"
-          sx={{
-            borderRadius: "50%",
-            objectFit: "cover",
-            width: "125px",
-            height: "125px",
-            mb: 4,
-          }}
+        {/* Animated background gradients */}
+        <GradientBackground
+          sx={{ background: "#aaeaf8", bottom: "-9%", left: "20%" }}
+          animation={moveAndResize1}
+        />
+        <GradientBackground
+          sx={{ background: "#f1904f", bottom: "0%", left: "34%" }}
+          animation={moveAndResize2}
+        />
+        <GradientBackground
+          sx={{ background: "#85aee9", bottom: "1%", left: "50%" }}
+          animation={moveAndResize3}
+        />
+        <GradientBackground
+          sx={{ background: "#f179a9", bottom: "1%", left: "65%" }}
+          animation={moveAndResize4}
+        />
+        <GradientBackground
+          sx={{ background: "#f7cb6d", bottom: "-9%", left: "81%" }}
+          animation={moveAndResize5}
         />
 
-        <Typography
+        <Container
+          maxWidth="lg"
           sx={{
-            fontSize: { xs: "2.5rem", md: "3.9rem" },
-            fontWeight: "bold",
-            mb: 4.5,
-            maxWidth: "900px",
-            lineHeight: 1.1,
-            letterSpacing: "-0.02em",
-            color: "#111213",
-            fontFamily: "Montserrat, sans-serif", // Set Montserrat font
-          }}
-        >
-          Join our pre-launch waitlist!
-        </Typography>
-
-        <Typography
-          variant="h2"
-          sx={{
-            fontSize: { xs: "1.25rem", md: "1.3rem" },
-            color: "rgba(0, 0, 0, 0.6)",
-            mb: 5,
-            fontWeight: "normal",
-          }}
-        >
-          Join our waitlist and be the first to save money and time on your
-          tourism cross-border payments!
-        </Typography>
-
-        <Box sx={{ display: "flex", justifyContent: "center", mb: 6 }}>
-          <QRCode value="https://forms.gle/Y9BF3W8auqinFF5b9" size={128} />
-        </Box>
-
-        <Box
-          sx={{
+            flex: 1,
             display: "flex",
-            gap: 2,
-            flexWrap: "wrap",
+            flexDirection: "column",
+            alignItems: "center",
             justifyContent: "center",
-            mb: 8,
+            textAlign: "center",
+            py: 1,
+            position: "relative",
+            zIndex: 1,
           }}
         >
-          <StoreButton
+          <Box
+            component="div"
             sx={{
-              pt: 2,
-              pr: 5,
-              pl: 5,
-              pb: 1.5,
-              backgroundColor: "#ffffff",
-              borderRadius: "50px",
+              position: "relative",
+              display: "inline-block",
+              borderRadius: "16px",
+              padding: "8px", // Space for the gradient border
+              background: "linear-gradient(to bottom, #87CEEB, #F4A261)", // Sky blue to Desert Gradient
             }}
           >
-            <a
-              href="https://forms.gle/Y9BF3W8auqinFF5b9"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              <Typography
-                sx={{
-                  fontSize: "1rem",
-                  color: "#111213",
-                  fontWeight: 600,
-                  letterSpacing: "-0.02em",
-                  textDecoration: "none",
-                }}
-              >
-                Join our waitlist
-              </Typography>
-            </a>
-          </StoreButton>
-        </Box>
-      </Container>
+            <Box
+              component="img"
+              src="https://images.unsplash.com/photo-1504326787394-e6d75cae8027?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fA%3D%3D"
+              alt="Welike Logo"
+              sx={{
+                borderRadius: "12px", // Inner image rounding
+                objectFit: "cover",
+                width: "100%",
+                height: "485px",
+                display: "block",
+                boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)", // Subtle shadow
+                transition:
+                  "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
+                "&:hover": {
+                  transform: "scale(1.02)", // Slight zoom effect
+                  boxShadow: "0px 8px 20px rgba(0, 0, 0, 0.2)", // Stronger shadow
+                },
+              }}
+            />
+          </Box>
 
-      <Box sx={{ position: "relative", zIndex: 1 }}>
-        <Container maxWidth="lg">
+          <Typography
+            sx={{
+              fontSize: { xs: "2.5rem", md: "3.9rem" },
+              fontWeight: "bold",
+              mb: 4.5,
+              maxWidth: "900px",
+              lineHeight: 1.1,
+              letterSpacing: "-0.02em",
+              color: "#111213",
+              fontFamily: "Montserrat, sans-serif", // Set Montserrat font
+            }}
+          >
+            Join our pre-launch waitlist!
+          </Typography>
+
+          <Typography
+            variant="h2"
+            sx={{
+              fontSize: { xs: "1.25rem", md: "1.3rem" },
+              color: "rgba(0, 0, 0, 0.6)",
+              mb: 5,
+              fontWeight: "normal",
+            }}
+          >
+            Join our waitlist and be the first to save money and time on your
+            tourism cross-border payments!
+          </Typography>
+
+          <Box sx={{ display: "flex", justifyContent: "center", mb: 6 }}>
+            <QRCode value="https://forms.gle/Y9BF3W8auqinFF5b9" size={128} />
+          </Box>
+
           <Box
             sx={{
               display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: 4,
+              gap: 2,
+              flexWrap: "wrap",
+              justifyContent: "center",
+              mb: 8,
             }}
           >
-            {/* Social Media Links */}
+            <StoreButton
+              sx={{
+                pt: 2,
+                pr: 5,
+                pl: 5,
+                pb: 1.5,
+                backgroundColor: "#ffffff",
+                borderRadius: "50px",
+              }}
+            >
+              <a
+                href="https://forms.gle/Y9BF3W8auqinFF5b9"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+              >
+                <Typography
+                  sx={{
+                    fontSize: "1rem",
+                    color: "#111213",
+                    fontWeight: 600,
+                    letterSpacing: "-0.02em",
+                    textDecoration: "none",
+                  }}
+                >
+                  Join our waitlist
+                </Typography>
+              </a>
+            </StoreButton>
+          </Box>
+        </Container>
+
+        <Box sx={{ position: "relative", zIndex: 1 }}>
+          <Container maxWidth="lg">
             <Box
               sx={{
                 display: "flex",
-                justifyContent: "center",
+                flexDirection: "column",
                 alignItems: "center",
-                gap: { xs: 2, md: 6 },
-                flexWrap: "wrap",
+                gap: 4,
               }}
             >
-              <FooterLink
-                href="https://www.facebook.com/xBordr"
-                target="_blank"
+              {/* Social Media Links */}
+              <Box
                 sx={{
-                  color: "#3b5998",
-                  fontSize: "1.2rem",
                   display: "flex",
-                  flexDirection: "column",
+                  justifyContent: "center",
                   alignItems: "center",
+                  gap: { xs: 2, md: 6 },
+                  flexWrap: "wrap",
                 }}
               >
-                <FaFacebook size={34} />
-                Facebook
-              </FooterLink>
-              <FooterLink
-                href="https://x.com/xbordrapp"
-                target="_blank"
-                sx={{
-                  color: "#333",
-                  fontSize: "1.2rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                <FaXTwitter size={34} /> X.com
-              </FooterLink>
-              <FooterLink
-                href="https://www.instagram.com/xbordr"
-                target="_blank"
-                sx={{
-                  color: "#e4405f",
-                  fontSize: "1.2rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                <FaInstagram size={34} />
-                Instagram
-              </FooterLink>
-              <FooterLink
-                href="https://www.linkedin.com/company/xbordr"
-                target="_blank"
-                sx={{
-                  fontSize: "1.2rem",
-                  color: "#0077b5",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                <FaLinkedin size={34} />
-                LinkedIn
-              </FooterLink>
-              <FooterLink
-                href="https://www.tiktok.com/@xbordrapp"
-                target="_blank"
-                sx={{
-                  fontSize: "1.2rem",
-                  color: "#000000",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                <FaTiktok size={34} />
-                TikTok
-              </FooterLink>
+                <FooterLink
+                  href="https://www.facebook.com/xBordr"
+                  target="_blank"
+                  sx={{
+                    color: "#3b5998",
+                    fontSize: "1.2rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <FaFacebook size={34} />
+                  Facebook
+                </FooterLink>
+                <FooterLink
+                  href="https://x.com/xbordrapp"
+                  target="_blank"
+                  sx={{
+                    color: "#333",
+                    fontSize: "1.2rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <FaXTwitter size={34} /> X.com
+                </FooterLink>
+                <FooterLink
+                  href="https://www.instagram.com/xbordr"
+                  target="_blank"
+                  sx={{
+                    color: "#e4405f",
+                    fontSize: "1.2rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <FaInstagram size={34} />
+                  Instagram
+                </FooterLink>
+                <FooterLink
+                  href="https://www.linkedin.com/company/xbordr"
+                  target="_blank"
+                  sx={{
+                    fontSize: "1.2rem",
+                    color: "#0077b5",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <FaLinkedin size={34} />
+                  LinkedIn
+                </FooterLink>
+                <FooterLink
+                  href="https://www.tiktok.com/@xbordrapp"
+                  target="_blank"
+                  sx={{
+                    fontSize: "1.2rem",
+                    color: "#000000",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <FaTiktok size={34} />
+                  TikTok
+                </FooterLink>
 
-              <FooterLink
-                href="mailto:hello@xbordr.com"
-                target="_blank"
-                sx={{
-                  fontSize: "1.2rem",
-                  color: "#e4405f",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                }}
-              >
-                <FaEnvelope size={34} />
-                Email
-              </FooterLink>
-            </Box>
+                <FooterLink
+                  href="mailto:hello@xbordr.com"
+                  target="_blank"
+                  sx={{
+                    fontSize: "1.2rem",
+                    color: "#e4405f",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <FaEnvelope size={34} />
+                  Email
+                </FooterLink>
+              </Box>
 
-            {/* Email Link */}
-            {/* <FooterLink
+              {/* Email Link */}
+              {/* <FooterLink
               href="mailto:hello@xbordr.com"
               sx={{
                 color: "rgba(0, 0, 0, 0.6)",
@@ -652,20 +670,21 @@ const AppHero = () => {
             >
               hello@xbordr.com
             </FooterLink> */}
-          </Box>
-        </Container>
-        <Typography
-          sx={{
-            mt: 4,
-            textAlign: "center",
-            color: "rgba(0, 0, 0, 0.6)",
-            fontSize: "0.875rem",
-          }}
-        >
-          All rights reserved. Copyright xBordr Inc. {new Date().getFullYear()}
-        </Typography>
+            </Box>
+          </Container>
+          <Typography
+            sx={{
+              mt: 4,
+              textAlign: "center",
+              color: "rgba(0, 0, 0, 0.6)",
+              fontSize: "0.875rem",
+            }}
+          >
+            All rights reserved. Copyright xBordr Inc.{" "}
+            {new Date().getFullYear()}
+          </Typography>
+        </Box>
       </Box>
-    </Box>
     </section>
   );
 };
