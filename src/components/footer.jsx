@@ -315,7 +315,6 @@
 
 // export default AppHero;
 
-
 import React from "react";
 import { Box, Container, Typography, Link } from "@mui/material";
 import { styled, keyframes } from "@mui/material/styles";
@@ -328,6 +327,7 @@ import {
   FaTiktok,
   FaEnvelope,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const moveAndResize1 = keyframes`
   0% { transform: translate(-20%, 0) scale(1); }
@@ -459,7 +459,7 @@ const AppHero = () => {
 
         <Typography
           sx={{
-            fontSize: { xs: "2.5rem", md: "4.2rem" },
+            fontSize: { xs: "2.5rem", md: "3.9rem" },
             fontWeight: "bold",
             mb: 4.5,
             maxWidth: "900px",
@@ -467,7 +467,6 @@ const AppHero = () => {
             letterSpacing: "-0.02em",
             color: "#111213",
             fontFamily: "Montserrat, sans-serif", // Set Montserrat font
-
           }}
         >
           Join our pre-launch waitlist!
@@ -524,7 +523,7 @@ const AppHero = () => {
                   textDecoration: "none",
                 }}
               >
-                Join our waitlist…
+                Join our waitlist
               </Typography>
             </a>
           </StoreButton>
@@ -569,14 +568,14 @@ const AppHero = () => {
                 href="https://x.com/xbordrapp"
                 target="_blank"
                 sx={{
-                  color: "#1DA1F2",
+                  color: "#333",
                   fontSize: "1.2rem",
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                 }}
               >
-                <FaTwitter size={34} />X
+                <FaXTwitter size={34} /> X
               </FooterLink>
               <FooterLink
                 href="https://www.instagram.com/xbordr"
@@ -662,7 +661,7 @@ const AppHero = () => {
             fontSize: "0.875rem",
           }}
         >
-          All rights reserved. Copyright xBordr, Inc. {new Date().getFullYear()}
+          All rights reserved. Copyright xBordr Inc. {new Date().getFullYear()}
         </Typography>
       </Box>
     </Box>

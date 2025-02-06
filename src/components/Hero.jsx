@@ -91,6 +91,7 @@ const HeroSection = () => {
                 lineHeight: 1.2,
                 color: "#000",
                 mb: 2,
+                // pl: { xs: 0, md: 10 },
               }}
             >
               <Box
@@ -106,14 +107,11 @@ const HeroSection = () => {
                   fontWeight: "bold",
                 }}
               >
-                xBordr
+                {/* xBordr */}
+                
               </Box>
               <br />
-              simplifies cross-border
-              <br />
-              payments
-              <br />
-              for tourism businesses.{" "}
+              Tourism Cross-Border Payments Simplified
             </Typography>
           </motion.div>
 
