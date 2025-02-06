@@ -397,6 +397,7 @@ const FooterLink = styled(Link)(() => ({
 
 const AppHero = () => {
   return (
+    <section id="waitlist">
     <Box
       sx={{
         bgcolor: "#f3f3f3",
@@ -575,7 +576,7 @@ const AppHero = () => {
                   alignItems: "center",
                 }}
               >
-                <FaXTwitter size={34} /> X
+                <FaXTwitter size={34} /> X.com
               </FooterLink>
               <FooterLink
                 href="https://www.instagram.com/xbordr"
@@ -665,6 +666,7 @@ const AppHero = () => {
         </Typography>
       </Box>
     </Box>
+    </section>
   );
 };
 

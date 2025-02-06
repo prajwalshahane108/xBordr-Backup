@@ -26,7 +26,8 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <Box sx={{ py: 12, bgcolor: "#f3f3f3" }}>
+    <section id="about-us">
+    <Box id="features" sx={{ py: 12, bgcolor: "#f3f3f3" }}>
       <Container maxWidth="lg">
         <Box sx={{ textAlign: "center", mb: 8 }}>
           <motion.div
@@ -174,5 +175,6 @@ export default function FeaturesSection() {
         </Grid>
       </Container>
     </Box>
+    </section>
   );
 }

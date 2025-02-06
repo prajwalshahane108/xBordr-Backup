@@ -44,12 +44,13 @@
 
     return (
       <Box
+        id="mobiles"
         sx={{
           position: "relative",
           width: "100%",
           minHeight: { xs: "50vh", sm: "70vh", md: "70vh", lg: "60vh" },
           mb: { xs: 8, sm: 10, md: 12 },
-          mt: { xs: 8, sm: 20, md: 12 },
+          mt: { xs: 18, sm: 20, md: 14 },
           background: "#f3f3f3",
           display: "flex",
           justifyContent: "center",

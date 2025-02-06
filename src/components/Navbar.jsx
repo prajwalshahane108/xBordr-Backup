@@ -14,15 +14,19 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import { MenuIcon } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Download } from "lucide-react";
 import Logo from "../assets/logo.png";
+
 const Hero = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   const menuItems = [
-    // "Home",
+    { label: "Home", id: "home" },
+    { label: "About Us", id: "about-us" },
+    { label: "How It Works", id: "how-it-works" },
+    { label: "Join Waitlist", id: "waitlist" },
   ];
 
   const [elevated, setElevated] = useState(false);
@@ -42,6 +46,15 @@ const Hero = () => {
     setDrawerOpen(open);
   };
 
+  // Smooth scrolling function
+  const handleMenuClick = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setDrawerOpen(false); // Close mobile menu after clicking
+  };
+
   return (
     <>
       <AppBar
@@ -57,7 +70,6 @@ const Hero = () => {
           <Toolbar sx={{ justifyContent: "space-between" }}>
             {/* Logo */}
             <Box display="flex" alignItems="center">
-              {/* Logo */}
               <Box
                 component="img"
                 src={Logo}
@@ -68,8 +80,6 @@ const Hero = () => {
                   objectFit: "contain",
                 }}
               />
-
-              {/* Text */}
               <Typography
                 variant="h4"
                 sx={{
@@ -79,7 +89,6 @@ const Hero = () => {
                   background: "#0077B3",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  // textTransform: "uppercase",
                   letterSpacing: "0.1rem",
                 }}
               >
@@ -87,13 +96,13 @@ const Hero = () => {
               </Typography>
             </Box>
 
-            {/* Desktop Navigation and Download Button */}
+            {/* Desktop Navigation */}
             {!isMobile && (
               <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
-                {/* Menu Items */}
                 {menuItems.map((item) => (
                   <Button
-                    key={item}
+                    key={item.id}
+                    onClick={() => handleMenuClick(item.id)}
                     sx={{
                       color: "text.secondary",
                       textTransform: "none",
@@ -105,37 +114,16 @@ const Hero = () => {
                       },
                     }}
                   >
-                    {item}
+                    {item.label}
                   </Button>
                 ))}
-
-                {/* Download Button */}
-                {/* <Button
-                  variant="contained"
-                  endIcon={<Download size={20}/>} // Add this line for the download icon
-                  sx={{
-                    bgcolor: "black",
-                    color: "white",
-                    textTransform: "none",
-                    px: 3,
-                    py: 1,
-                    borderRadius: "50px",
-                    fontSize: "0.875rem",
-                    fontWeight: 600,
-                    "&:hover": {
-                      bgcolor: "rgba(0,0,0,0.8)",
-                    },
-                  }}
-                >
-                  Download
-                </Button> */}
               </Box>
             )}
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu Icon */}
             {isMobile && (
               <IconButton onClick={toggleDrawer(true)} sx={{ color: "black" }}>
-                <MenuIcon />
+                <Menu />
               </IconButton>
             )}
           </Toolbar>
@@ -149,7 +137,7 @@ const Hero = () => {
         onClose={toggleDrawer(false)}
         sx={{
           "& .MuiDrawer-paper": {
-            width: "30%",
+            width: "70%",
             padding: 2,
           },
         }}
@@ -158,19 +146,19 @@ const Hero = () => {
           <Box
             component="img"
             src={Logo}
-            alt="Welike Logo"
+            alt="xBordr Logo"
             sx={{
-              height: 100,
+              height: 80,
               width: "auto",
               mb: 3,
             }}
           />
           <List>
             {menuItems.map((item) => (
-              <ListItem key={item} disablePadding>
-                <ListItemButton onClick={toggleDrawer(false)}>
+              <ListItem key={item.id} disablePadding>
+                <ListItemButton onClick={() => handleMenuClick(item.id)}>
                   <ListItemText
-                    primary={item}
+                    primary={item.label}
                     primaryTypographyProps={{
                       fontSize: "1rem",
                       fontWeight: 500,
@@ -181,27 +169,6 @@ const Hero = () => {
               </ListItem>
             ))}
           </List>
-          {/* <Button
-            variant="contained"
-            fullWidth
-            sx={{
-              bgcolor: "black",
-              color: "white",
-              textTransform: "none",
-              width: "90%",
-              px: 3,
-              py: 1,
-              mt: 2,
-              borderRadius: "50px",
-              fontSize: "0.875rem",
-              fontWeight: 600,
-              "&:hover": {
-                bgcolor: "rgba(0,0,0,0.8)",
-              },
-            }}
-          >
-            Download
-          </Button> */}
         </Box>
       </Drawer>
     </>

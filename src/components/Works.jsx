@@ -56,7 +56,8 @@ export default function HowItWorks() {
       number: "1",
       color: "#0077B3",
       title: "Start",
-      description: "Integrate our API into your tourism payments software or use our web platform.",
+      description:
+        "Integrate our API into your tourism payments software or use our web platform.",
       imageUrl:
         "https://cdn.prod.website-files.com/62da6b5f754c761cc1b0de4b/62dff0a517e347c1be7f1ee1_Step%201.svg", // Replace with your image URL
     },
@@ -81,10 +82,11 @@ export default function HowItWorks() {
   ];
 
   return (
-    <Box sx={{ py: 8, bgcolor: "#f3f3f3" }}>
-      <Container maxWidth="lg">
-        <Box sx={{ textAlign: "center", mb: 6 }}>
-          {/* <Typography
+    <section id="how-it-works">
+      <Box sx={{ py: 8, bgcolor: "#f3f3f3" }}>
+        <Container maxWidth="lg">
+          <Box sx={{ textAlign: "center", mb: 6 }}>
+            {/* <Typography
             component={motion.div}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -98,7 +100,7 @@ export default function HowItWorks() {
           >
             Step by step
           </Typography> */}
-          {/* <Typography
+            {/* <Typography
             component={motion.div}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -112,69 +114,69 @@ export default function HowItWorks() {
           >
             How xBordr Works
           </Typography> */}
-         <Typography
-  variant="h2"
-  sx={{
-    fontSize: { xs: "1.8rem", md: "3rem" },
-    fontWeight: "bold",
-    lineHeight: 1.2,
-    mb: 4,
-    mt: 2,
-    ml: 0, // No left margin
-    color: "#000000", // Default color for the rest of the text
-    textAlign: "center", // Centers the text horizontally
-    alignSelf: "center", // Centers the component within a flex container
-    fontFamily: "Montserrat, sans-serif", // Set Montserrat font
-  }}
->
-  How <span style={{ color: "#0077B3" }}>xBordr</span> Works
-</Typography>
+            <Typography
+              variant="h2"
+              sx={{
+                fontSize: { xs: "1.8rem", md: "3rem" },
+                fontWeight: "bold",
+                lineHeight: 1.2,
+                mb: 4,
+                mt: 2,
+                ml: 0, // No left margin
+                color: "#000000", // Default color for the rest of the text
+                textAlign: "center", // Centers the text horizontally
+                alignSelf: "center", // Centers the component within a flex container
+                fontFamily: "Montserrat, sans-serif", // Set Montserrat font
+              }}
+            >
+              How <span style={{ color: "#0077B3" }}>xBordr</span> Works
+            </Typography>
+          </Box>
 
-        </Box>
-
-        <Grid container spacing={2}>
-          {steps.map((step, index) => (
-            <Grid item xs={12} md={4} key={step.number}>
-              <StepCard>
-                <ImageBox>
-                  <img
-                    src={step.imageUrl}
-                    alt={step.title}
-                    style={{
-                      width: "100%", // Makes the image fill the container
-                      height: "100%", // Makes the image fill the container's height
-                      objectFit: "contain", // Ensures the image covers the container without distorting
-                    }}
-                  />
-                </ImageBox>
-                <StepNumber color={step.color}>{step.number}</StepNumber>
-              </StepCard>
-              <Typography
-                variant="h5"
-                sx={{
-                  fontWeight: "bold",
-                  mb: 2,
-                  mt: 3,
-                  color: "#1a1a1a",
-                  textAlign: "center",
-                }}
-              >
-                {step.title}
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{
-                  color: "#666",
-                  textAlign: "center",
-                  px: 2,
-                }}
-              >
-                {step.description}
-              </Typography>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </Box>
+          <Grid container spacing={2}>
+            {steps.map((step, index) => (
+              <Grid item xs={12} md={4} key={step.number}>
+                <StepCard>
+                  <ImageBox>
+                    <img
+                      src={step.imageUrl}
+                      alt={step.title}
+                      style={{
+                        width: "100%", // Makes the image fill the container
+                        height: "100%", // Makes the image fill the container's height
+                        objectFit: "contain", // Ensures the image covers the container without distorting
+                      }}
+                    />
+                  </ImageBox>
+                  <StepNumber color={step.color}>{step.number}</StepNumber>
+                </StepCard>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontWeight: "bold",
+                    mb: 2,
+                    mt: 3,
+                    color: "#1a1a1a",
+                    textAlign: "center",
+                  }}
+                >
+                  {step.title}
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "#666",
+                    textAlign: "center",
+                    px: 2,
+                  }}
+                >
+                  {step.description}
+                </Typography>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+      </section>
   );
 }
